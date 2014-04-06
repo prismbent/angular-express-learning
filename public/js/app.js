@@ -18,8 +18,12 @@ config(function ($routeProvider, $locationProvider) {
       templateUrl: 'partials/partial2',
       controller: 'MyCtrl2'
     }).
+     when('/character', {
+      templateUrl: 'partials/character',
+      controller: 'CharacterCtrl'
+    }).
     otherwise({
-      redirectTo: '/view1'
+      redirectTo: '/'
     });
 
   $locationProvider.html5Mode(true);

@@ -1,19 +1,29 @@
 extends layout
+//  block body
+    div(ng-controller='AppCtrl')
+      h2 Hello {{name}}
+      ul.menu
+        li
+          a(href='view1') view1
+        li
+          a(href='view2') view2
+
+      div(ng-view)
+
+      div
+        | Angular seed app: v
+        span(app-version)
+
 
 block body
   div(ng-controller='AppCtrl')
-    h2 Hello {{name}}
-    ul.menu
-      li
-        a(href='view1') view1
-      li
-        a(href='view2') view2
+    h2 Game of Thrones
+
+    ul.example-animate-container
+    li.animate-repeat(ng-repeat='character in characters | orderBy: "house":true')
+      a(href='character', ng-click='getCharacter(character)') {{character.name}}
 
     div(ng-view)
-
-    div
-      | Angular seed app: v
-      span(app-version)
 
   script(src='js/lib/angular/angular.js')
   script(src='js/app.js')
@@ -21,3 +31,4 @@ block body
   script(src='js/controllers.js')
   script(src='js/filters.js')
   script(src='js/directives.js')
+
