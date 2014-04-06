@@ -1,5 +1,8 @@
-p Name: {{character.name}}
-p House: {{character.house}}
-p Actor: {{character.actor}}
-p Quote: {{character.quote}}
-p Episodes: {{character.episodes}}
+div.side
+	img(ng-src='images/{{character.img}}')
+div.side.details
+	p <strong>Name:</strong> {{character.name}}
+	p <strong>House:</strong> {{character.house}}
+	p <strong>Actor:</strong> {{character.actor}}
+	p <strong>Quote:</strong> {{character.quote}}
+	p <strong>Episodes:</strong> {{character.episodes}}

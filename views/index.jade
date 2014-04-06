@@ -19,11 +19,11 @@ block body
   div(ng-controller='AppCtrl')
     h2 Game of Thrones
 
-    ul.example-animate-container
-    li.animate-repeat(ng-repeat='character in characters | orderBy: "house":true')
-      a(href='character', ng-click='getCharacter(character)') {{character.name}}
+    ul.example-animate-container.side-nav
+      li.animate-repeat(ng-repeat='character in characters | orderBy: "house":true')
+        a(href='character', ng-click='getCharacter(character)') {{character.name}}
 
-    div(ng-view)
+    div(ng-view).side-full
 
   script(src='js/lib/angular/angular.js')
   script(src='js/app.js')

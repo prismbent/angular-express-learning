@@ -9,6 +9,7 @@ block body
     li.animate-repeat(ng-repeat='character in characters')
         a(ng-href='partials/character') {{character.name}}
         span House of {{character.house}}
+        img(ngSrc='{{character.img}}')
 
 
   script(src='js/lib/angular/angular.js')
